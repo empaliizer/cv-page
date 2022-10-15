@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+// Typogrophy 
+
+.top-title {
+    font-size: 6rem;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+    color: $primary-color;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: $primary-color;
+}
+
+h3 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+h4 {
+    line-height: 3rem;
+}
+
+h1, h2, h3, h4 {
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+strong {
+    color: $second-color;
+}
+
+p {
+    font-size: 1rem;
+    font-family: $second-font;
+
+}
+
+address {
+    line-height: 1.8rem;
+}
+
+
+.text > p, .card-main > p, .col-3 > p {
+    line-height: 1.8rem;
+}
+
+// Form
+
+input, label, textarea, button {
+    font-size: 1.2rem;
+    font-family: $second-font;
+}
+
+// Margins 
+
+.mt-lg {
+    @include margin-top-lg(130px, 65px);
+}
+
+.mb-s {
+    @include margin-bottom-s(30px, 15px);
+}
+
+.mt-s {
+    @include margin-top-s(30px, 15px);
+}
+
+.mr-m {
+    @include margin-right-m(50px, 25px);
+}
+
+.mb-m {
+    @include margin-bottom-m(50px, 25px);
+}
+
+.mt-m {
+    @include margin-top-m(50px, 25px);
+}
+
+.mb-xs {
+    @include margin-bottom-xs(15px, 7px);
+}
+
+.mb-lg {
+    @include margin-bottom-lg(130px, 65px);
+}
+
+.mr-lg {
+    @include margin-right-lg(130px, 65px)
+}

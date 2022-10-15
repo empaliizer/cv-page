@@ -1,0 +1,119 @@
+@mixin display-flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin display-flex-center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin display-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin display-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin flex-column-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-align {
+    display: flex;
+    align-items: center;
+}
+
+// Margin-bottom
+
+@mixin margin-bottom-lg($value: 130px, $mobileValue: 65px) {
+    margin-bottom: $value;
+
+    @media screen and (max-width: $mobile-screen){
+        margin-bottom: $mobileValue;
+    }
+}
+
+@mixin margin-bottom-m($value:50px, $mobileValue: 25px) {
+    margin-bottom: $value;
+
+    @media screen and (max-width: $mobile-screen){
+        margin-bottom: $mobileValue;
+    }
+}
+
+@mixin margin-bottom-s($value: 20px, $mobileValue: 10px) {
+    margin-bottom: $value;
+
+    @media screen and (max-width: $mobile-screen){
+        margin-bottom: $mobileValue;
+    }
+}
+
+@mixin margin-bottom-xs($value:15px, $mobileValue: 7px) {
+    margin-bottom: $value;
+
+    @media screen and (max-width: $mobile-screen){
+        margin-bottom: $mobileValue;
+    }
+}
+
+// Margin-top
+
+@mixin margin-top-lg($value: 130px, $mobileValue: 65px) {
+    margin-top: $value;
+
+    @media screen and (max-width: $mobile-screen){
+        margin-top: $mobileValue;
+    }
+}
+
+@mixin margin-top-m($value:50px, $mobileValue: 25px) {
+    margin-top: $value;
+
+    @media screen and (max-width: $mobile-screen){
+        margin-top: $mobileValue;
+    }
+}
+
+@mixin margin-top-s($value:30px, $mobileValue: 15px) {
+    margin-top: $value;
+
+    @media screen and (max-width: $mobile-screen){
+        margin-top: $mobileValue;
+    }
+}
+
+@mixin margin-top-xs($value:15px, $mobileValue: 7px) {
+    margin-top: $value;
+
+    @media screen and (max-width: $mobile-screen){
+        margin-top: $mobileValue;
+    }
+}
+
+// Margin-right
+
+@mixin margin-right-lg($value:130px, $mobileValue: 65px) {
+    margin-right: $value;
+
+    @media screen and (max-width: $mobile-screen){
+        margin-right: $mobileValue;
+    }
+}
+
+@mixin margin-right-m($value:50px, $mobileValue: 25px) {
+    margin-right: $value;
+
+    @media screen and (max-width: $mobile-screen){
+        margin-right: $mobileValue;
+    }
+}

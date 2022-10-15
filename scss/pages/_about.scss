@@ -1,0 +1,14 @@
+.about-section {
+    @media screen and (max-width: $mobile-screen) {
+        @include flex-align;
+        flex-direction: column-reverse;
+    }
+}
+
+.about-img {
+    margin-top: unset;
+
+    @media screen and (max-width: $mobile-screen) {
+        width: 50%;
+    }
+}

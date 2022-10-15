@@ -1,0 +1,43 @@
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+
+    @media screen and (max-width: $mobile-screen) {
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    &-list {
+        list-style: none;
+        margin: 35px 80px 15px 0;
+        padding: 0;
+        display: flex;
+
+        @media screen and (max-width: $mobile-screen) {
+            margin: 35px 0 15px;
+        }
+    }
+
+    &-item {
+        margin-left: 48px;
+        font-size: 1.2rem;
+
+        @media screen and (max-width: $mobile-screen) {
+            margin-left: unset;
+            margin: 0px 10px;
+        }
+    }
+
+    &-link {
+        color: $primary-color;
+        text-decoration: none;
+        transition: all 0.3s;
+            &:hover {
+                color: $second-color;
+                font-weight: 700;
+
+            }
+    }
+
+}
