@@ -2,18 +2,36 @@
     "education": [
         {
             "year": "2022-2024",
-            "school": "Chas Academy",
+            "heading": "Chas Academy",
             "description": "Went two years in school to get a education in UX/UI with frontend knowledge."
         }, 
         {
             "year": "2020-2021",
-            "school": "Karlskoga Folkhögskola",
+            "heading": "Karlskoga Folkhögskola",
             "description": "During one year i learned the basic knowledge in Web development and Webdesign."
         },
         {
             "year": "2009-2012",
-            "school": "John Bauer Gymnasiet",
+            "heading": "John Bauer Gymnasiet",
             "description": "I went three years in high school to become a hairdresser."
+        }
+    ],
+
+    "experience": [
+        {
+            "year": "2019- ",
+            "heading": "Nyberg Creative AB",
+            "description": "Junior frontenddeveloper, has taken care of simpler projects that have mainly contained HTML and CSS. Had some customer service responsibility when contacting new customers.."
+        }, 
+        {
+            "year": "2017-2020",
+            "heading": "ToysRus",
+            "description": "Started as extra staff during Christmas and then worked my way up to get a permanent position as cashier in charge. Initially worked a lot in the cash register and then out in the store and unpacked new products to the store and trained new cashier staff."
+        },
+        {
+            "year": "2013-2020",
+            "heading": "Fantastic Beauty Stockholm",
+            "description": "Owner and founder of the beauty salon Fantastic Beauty. I performed various treatments in nails and lashes, managed most of the pieces myself, such as purchasing, accounting, etc."
         }
     ]
 }
