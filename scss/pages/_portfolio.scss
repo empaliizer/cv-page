@@ -34,20 +34,60 @@
         margin-bottom: 30px;
         }
 
+        .portfolio-img {
+            
+            background-size: cover;
+            position: absolute;
+            width: 20%;
+             height: 36%;
+        }
+
+        .dark:hover {
+            background-color: black;
+            color: white;
+            opacity: 95%;
+            position: relative;
+            z-index: 10;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 76%;
+            transition: .45s ease-in-out;
+
+        }
+
+        .light:hover {
+            background-color: white;
+            opacity: 95%;
+            position: relative;
+            z-index: 10;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 76%;
+            transition: .45s ease-in-out;
+        }
+        
+
         .card-main {
-            @include display-center-column;
+        @include display-center-column;
+        position: relative;
+        z-index: 20;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 19px;
 
-            @media screen and (max-width: $mobile-screen) {
-                align-items: center;
+        @media screen and (max-width: $mobile-screen) {
+        align-items: center;
 
-                .mr-m {
-                    margin-right: 0;
-                }
+            mr-m {
+            margin-right: 0;
             }
-                
-            .portfolio-img {
-                width: 70%;
-            }
+        }
         }
     }
 }

@@ -799,6 +799,39 @@ form button {
     margin-bottom: 30px;
   }
 }
+.portfolio-inner .card .portfolio-img {
+  background-size: cover;
+  position: absolute;
+  width: 20%;
+  height: 36%;
+}
+.portfolio-inner .card .dark:hover {
+  background-color: black;
+  color: white;
+  opacity: 95%;
+  position: relative;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 76%;
+  -webkit-transition: 0.45s ease-in-out;
+  transition: 0.45s ease-in-out;
+}
+.portfolio-inner .card .light:hover {
+  background-color: white;
+  opacity: 95%;
+  position: relative;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 76%;
+  -webkit-transition: 0.45s ease-in-out;
+  transition: 0.45s ease-in-out;
+}
 .portfolio-inner .card .card-main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -810,6 +843,13 @@ form button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  z-index: 20;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 19px;
 }
 @media screen and (max-width: 767px) {
   .portfolio-inner .card .card-main {
@@ -817,12 +857,9 @@ form button {
         -ms-flex-align: center;
             align-items: center;
   }
-  .portfolio-inner .card .card-main .mr-m {
+  .portfolio-inner .card .card-main mr-m {
     margin-right: 0;
   }
-}
-.portfolio-inner .card .card-main .portfolio-img {
-  width: 70%;
 }
 
 .center {
