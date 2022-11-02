@@ -1,37 +1,30 @@
+let startItem = 0;
+let endItem = 3;
+const loadMoreBtn = document.querySelector('#loadmore');
 fetch("https://api.github.com/users/empaliizer/repos")
     .then((res) => res.json())
     .then((objs) => {
 
         fetch("../data/portfolio.json")
             .then((res) => res.json())
-            .then((imgs) => {
-
-                for(let i = 0; i < 3; i++) {
-                    objs[i].img = imgs[objs[i].name] || "/img/hangman.png";
-                    console.log(objs[i])
-                    portCard(objs[i]);
-
-                }
+            .then((cont) => {
+                loopItems(objs, cont);
+                loadMoreBtn.addEventListener('click', () => {
+                    startItem = startItem + 3;
+                    endItem = endItem + 3;
+                    loopItems(objs, cont);
+                })
         });
-        
-
-
-      
-  
-    //   for (let desc of obj.description) {
-    //       const cvCard = createCard(edu);
-    //     /* Lägg till element i htmlen */
-    //     eduContainer.appendChild(cvCard);
-    //   }
-  
-    //   for (let exp of obj.experience) {
-    //       const cvCard = createCard(exp);
-  
-    //       expContainer.appendChild(cvCard);
-    //   }
-  
-  
     });
+
+const loopItems = (objs, cont) => {
+    for(let i = startItem; i < endItem; i++) {
+        objs[i].img = cont[objs[i].name]?.img || "/img/coming-soon-1.jpeg";
+        objs[i].heading = cont[objs[i].name]?.name || objs[i].name; 
+        console.log(objs[i])
+        portCard(objs[i]);
+    }
+}
 
 const portCard = (obj) => {
     console.log(obj.img)
@@ -54,32 +47,28 @@ const portCard = (obj) => {
     img.classList.add("portfolio-img");
     bgColor.classList.add("bg-color");
     cardMain.classList.add("card-main");
-    btnContainer.classList.add("btn-container", "mb-s", "mt-s");
+    btnContainer.classList.add("col-3", "btn-container", "mb-s", "mt-s");
     info.classList.add("text-info");
     btn.classList.add("btn");
     btnLink.classList.add("btn-link")
-    heading.classList.add("heading");
+    heading.classList.add("heading", "mt-s", "mb-s");
   
     img.setAttribute('style',`background-image: url('${obj.img}`);
     info.innerHTML = obj.description;
-    btn.innerHTML = obj.html_url;
+    btn.setAttribute('href', obj.html_url);
     btnLink.innerHTML = `Link to github`;
     h2.innerHTML = obj.heading;
 
+    btn.appendChild(btnLink)
+    btnContainer.appendChild(btn)
     cardMain.appendChild(info);
-    cardMain.appendChild(
-        btnContainer.appendChild(
-            btn.appendChild(
-                btnLink
-            )
-        )
-    );
-    
+    cardMain.appendChild(btnContainer);
     bgColor.appendChild(cardMain);
     cardInner.appendChild(img);
     cardInner.appendChild(bgColor);
-    cardInner.appendChild(cardMain);
     card.appendChild(cardInner);
+    heading.appendChild(h2);
+    card.appendChild(heading);
     col3.appendChild(card);
   
       return card;

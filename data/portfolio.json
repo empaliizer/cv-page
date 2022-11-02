@@ -1,4 +1,50 @@
 {
-    "guessing-game": "/img/number-guessing-game.png",
-    "rock-paper-scissor": "/img/rock-paper-scissor.png"
+    "guessing-game": {
+        "name": "Guessing game",
+        "img": "/img/number-guessing-game.png"
+    },
+
+    "rock-paper-scissor": {
+        "name": "Rock, paper, scissor",
+        "img": "/img/rock-paper-scissors.png"
+    },
+
+    "cv-page": {
+        "name": "Resume",
+        "img": "/img/cv.png"
+    },
+
+    "fantastic-beauty": {
+        "name": "Fantastic Beauty",
+        "img": "/img/fantastic-beauty.png"
+    },
+
+    "fullscreen-menu": {
+        "name": "Fullscreen Menu",
+        "img": "/img/fullscreen.png"
+    },
+
+    "the-pig-game": {
+        "name": "The pig game",
+        "img": "/img/piggy.png"
+    },
+
+    "todo-app": {
+        "name": "Todo app",
+        "img": "/img/port-todo.png"
+    }, 
+
+    "redesign": {
+        "name": "Redesign",
+        "img": "/img/konstnars.png"
+    },
+
+    "hangman": {
+        "name": "Hangman",
+        "img": "/img/hangman.png"
+    },
+
+    "coming-soon": {
+        "img": "/img/coming-soon-1.jpeg"
+    } 
 }
