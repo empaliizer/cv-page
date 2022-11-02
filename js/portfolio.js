@@ -1,6 +1,8 @@
 let startItem = 0;
 let endItem = 3;
 const loadMoreBtn = document.querySelector('#loadmore');
+const col3 = document.querySelector('#col-3');
+
 fetch("https://api.github.com/users/empaliizer/repos")
     .then((res) => res.json())
     .then((objs) => {
@@ -8,6 +10,7 @@ fetch("https://api.github.com/users/empaliizer/repos")
         fetch("../data/portfolio.json")
             .then((res) => res.json())
             .then((cont) => {
+                col3.innerHTML = '';
                 loopItems(objs, cont);
                 loadMoreBtn.addEventListener('click', () => {
                     startItem = startItem + 3;
@@ -28,7 +31,6 @@ const loopItems = (objs, cont) => {
 
 const portCard = (obj) => {
     console.log(obj.img)
-    const col3 = document.querySelector('#col-3');
 
     const card = document.createElement("div");
     const cardInner = document.createElement("div");
