@@ -61,9 +61,7 @@
                     z-index: 1;
                 }
             }
-
     }
-    
     
     .card {
         width: 33.3%;
@@ -137,15 +135,6 @@
     }
 }
 
-
 .center {
     justify-content: center;
-}
-
-.hyphens {
-    @media screen and (max-width: $tablet-screen) {
-       word-wrap: break-word;
-       overflow-wrap: break-word;
-       hyphens: auto;
-        } 
 }

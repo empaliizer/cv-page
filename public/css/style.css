@@ -196,8 +196,11 @@ input, label, textarea, button {
   transition: all 0.3s;
 }
 .menu-link:hover {
-  color: #8872ed;
   font-weight: 700;
+}
+.menu .active {
+  font-weight: 900;
+  color: #8872ed;
 }
 
 @media screen and (max-width: 767px) {
@@ -941,14 +944,4 @@ form button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-@media screen and (max-width: 1000px) {
-  .hyphens {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
-  }
 }
