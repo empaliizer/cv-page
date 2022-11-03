@@ -1,3 +1,6 @@
+.menu-button {
+    display: none;
+}
 .menu {
     display: flex;
     justify-content: flex-end;
@@ -43,4 +46,66 @@
         color: $second-color;
     }
 
+}
+
+@media screen and (max-width: $mobile-screen) {
+
+.menu-button {
+    display: flex;
+    background-color: #fff;
+    border: 0; 
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    cursor: pointer;
+    z-index: 1000;
+
+    .material-symbols-outlined {
+        color: $second-color;
+        font-size: 40px;
+    }
+}
+
+.menu {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    place-items: center;
+    text-align: center;
+    z-index: 999;
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        &-item {
+            line-height: 1.5;
+            &--current {
+                .menu-link {
+                    color: $second-color;
+                }
+            }
+        }
+
+        &-link {
+            color: $primary-color;
+            font-size: 3rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover {
+                color: $second-color;
+            }
+        }
+        &--active {
+            display: grid;
+        }
+}
 }

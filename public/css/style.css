@@ -21,6 +21,17 @@ h1 {
   line-height: 5rem;
   color: #000;
 }
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 h2 {
   font-size: 2.5rem;
@@ -149,6 +160,10 @@ input, label, textarea, button {
   }
 }
 
+.menu-button {
+  display: none;
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -203,6 +218,67 @@ input, label, textarea, button {
   color: #8872ed;
 }
 
+@media screen and (max-width: 767px) {
+  .menu-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fff;
+    border: 0;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  .menu-button .material-symbols-outlined {
+    color: #8872ed;
+    font-size: 40px;
+  }
+  .menu {
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    place-items: center;
+    text-align: center;
+    z-index: 999;
+  }
+  .menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .menu-item {
+    line-height: 1.5;
+  }
+  .menu-item--current .menu-link {
+    color: #8872ed;
+  }
+  .menu-link {
+    color: #000;
+    font-size: 3rem;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .menu-link:hover {
+    color: #8872ed;
+  }
+  .menu--active {
+    display: grid;
+  }
+}
 @media screen and (max-width: 767px) {
   .form-contact {
     -webkit-box-orient: vertical;
