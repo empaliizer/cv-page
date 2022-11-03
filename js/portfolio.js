@@ -16,7 +16,7 @@ fetch("https://api.github.com/users/empaliizer/repos")
                     startItem = startItem + 3;
                     endItem = endItem + 3;
                     loopItems(objs, cont);
-                })
+                });
         });
     });
 
@@ -30,8 +30,6 @@ const loopItems = (objs, cont) => {
 }
 
 const portCard = (obj) => {
-    console.log(obj.img)
-
     const card = document.createElement("div");
     const cardInner = document.createElement("div");
     const img = document.createElement("div");
@@ -74,5 +72,5 @@ const portCard = (obj) => {
     col3.appendChild(card);
   
       return card;
-  };
+};
   

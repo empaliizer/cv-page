@@ -42,13 +42,11 @@ fetch("../data/cv.json")
 
     for (let edu of obj.education) {
         const cvCard = createCard(edu);
-      /* Lägg till element i htmlen */
-      eduContainer.appendChild(cvCard);
+        eduContainer.appendChild(cvCard);
     }
 
     for (let exp of obj.experience) {
         const cvCard = createCard(exp);
-
         expContainer.appendChild(cvCard);
     }
 
