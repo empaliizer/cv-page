@@ -32,6 +32,30 @@ const createCard = (obj) => {
     return cvCard;
 };
 
+const skillCard = (obj) => {
+  const container = document.createElement("div");
+  const title = document.createElement("p")
+  const dark = document.createElement("div");
+  const light = document.createElement("div");
+  const procent = document.createElement("p");
+
+  container.classList.add("skill-container");
+  title.classList.add("skill-title");
+  dark.classList.add("skill-dark");
+  light.classList.add("skill-light");
+  light.style.width = obj.procent;
+
+  title.innerHTML = obj.skill; 
+  procent.innerHTML = obj.procent;
+
+  container.appendChild(title);
+  dark.appendChild(light);
+  container.appendChild(dark);
+  container.appendChild(procent);
+
+  return container;
+}
+
 
 fetch("../data/cv.json")
   .then((res) => res.json())
@@ -39,6 +63,7 @@ fetch("../data/cv.json")
 
     const eduContainer = document.querySelector("#education");
     const expContainer = document.querySelector("#experience");
+    const skillContianer = document.querySelector("#cv-skills");
 
     for (let edu of obj.education) {
         const cvCard = createCard(edu);
@@ -50,5 +75,8 @@ fetch("../data/cv.json")
         expContainer.appendChild(cvCard);
     }
 
-
+    for(let skill of obj.skills){
+    const skillSection = skillCard(skill);
+    skillContianer.appendChild(skillSection);
+  }
   });

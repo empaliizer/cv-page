@@ -216,6 +216,7 @@ input, label, textarea, button {
 }
 .menu-link:hover {
   font-weight: 700;
+  color: #8872ed;
 }
 .menu .active {
   font-weight: 900;
@@ -817,15 +818,6 @@ form button {
 .skill-container .skill-dark .skill-light {
   background-color: #8872ed;
   border-radius: 50px;
-}
-.skill-container .skill-html, .skill-container .skill-css {
-  width: 80%;
-}
-.skill-container .skill-javascript, .skill-container .skill-ux {
-  width: 20%;
-}
-.skill-container .skill-ui {
-  width: 40%;
 }
 
 .social-space a {
