@@ -33,5 +33,28 @@
             "heading": "Fantastic Beauty Stockholm",
             "description": "Owner and founder of the beauty salon Fantastic Beauty. I performed various treatments in nails and lashes, managed most of the pieces myself, such as purchasing, accounting, etc."
         }
+    ],
+
+    "skills": [
+        {
+            "skill": "HTML",
+            "procent": "80%"
+        },
+        {
+            "skill": "CSS",
+            "procent": "80%"
+        },
+        {
+            "skill": "Javascript",
+            "procent": "20%"
+        },
+        {
+            "skill": "UI",
+            "procent": "40%"
+        },
+        {
+            "skill": "UX",
+            "procent": "20%"
+        }
     ]
 }
