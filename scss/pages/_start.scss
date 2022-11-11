@@ -16,6 +16,15 @@
 
 .wrapper {
     width: 100%;
+    animation: wrapper-anim 0.3s linear;
+    @keyframes wrapper-anim {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
     @include display-flex-center;
 
         &-inner {
@@ -23,6 +32,10 @@
             max-width: $max-width;
 
         }
+    &.hide {
+        opacity: 0;
+        transition: 0.3s all ease-in-out;
+    }
 }
 
 .col-2 {
@@ -52,6 +65,17 @@
      }
 
     h1 {
+        span {
+            animation: h1-anim 0.2s linear;
+            @keyframes h1-anim {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
         @media screen and (max-width: $tablet-screen) {
             font-size: 3rem;
         }

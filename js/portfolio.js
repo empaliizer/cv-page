@@ -24,11 +24,15 @@ fetch("https://api.github.com/users/empaliizer/repos")
     });
 
 const loopItems = (objs, cont) => {
+    let animationSpeed = 0;
     for(let i = startItem; i < endItem; i++) {
-        objs[i].img = cont[objs[i].name]?.img || "/img/coming-soon-1.jpeg";
-        objs[i].heading = cont[objs[i].name]?.name || objs[i].name; 
-        console.log(objs[i])
-        portCard(objs[i]);
+        setTimeout(() => {
+            objs[i].img = cont[objs[i].name]?.img || "/img/coming-soon-1.jpeg";
+            objs[i].heading = cont[objs[i].name]?.name || objs[i].name; 
+            console.log(objs[i])
+            portCard(objs[i]);
+        }, animationSpeed)
+        animationSpeed += 200;
     }
 }
 

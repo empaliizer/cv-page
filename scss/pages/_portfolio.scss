@@ -66,7 +66,17 @@
     .card {
         width: 33.3%;
         padding: 20px;
+        animation: card-anim 0.6s linear;
 
+        @keyframes card-anim {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
     @media screen and (max-width: $mobile-screen) {
         width: 90%;
         margin-bottom: 30px;
@@ -75,7 +85,10 @@
         .card-inner {
             position: relative;
             height: 370px;
+            
         }
+
+        
 
         .portfolio-img {
             background-size: cover;
