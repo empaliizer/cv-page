@@ -1,3 +1,4 @@
+// Lägg in fördröjning
 let startItem = 0;
 let endItem = 3;
 const loadMoreBtn = document.querySelector('#loadmore');
@@ -10,13 +11,15 @@ fetch("https://api.github.com/users/empaliizer/repos")
         fetch("../data/portfolio.json")
             .then((res) => res.json())
             .then((cont) => {
-                col3.innerHTML = '';
-                loopItems(objs, cont);
-                loadMoreBtn.addEventListener('click', () => {
-                    startItem = startItem + 3;
-                    endItem = endItem + 3;
+                setTimeout(() => {
+                    col3.innerHTML = '';
                     loopItems(objs, cont);
-                });
+                    loadMoreBtn.addEventListener('click', () => {
+                        startItem = startItem + 3;
+                        endItem = endItem + 3;
+                        loopItems(objs, cont);
+                    });
+                }, 1000);
         });
     });
 
