@@ -155,6 +155,15 @@ input, label, textarea, button {
   }
 }
 
+.mr-xs {
+  margin-right: 15px;
+}
+@media screen and (max-width: 767px) {
+  .mr-xs {
+    margin-right: 7px;
+  }
+}
+
 .mr-lg {
   margin-right: 130px;
 }

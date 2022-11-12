@@ -117,6 +117,10 @@ input, label, textarea, button {
     @include margin-bottom-lg(130px, 65px);
 }
 
+.mr-xs {
+    @include margin-right-xs(15px, 7px);
+}
+
 .mr-lg {
-    @include margin-right-lg(130px, 65px)
+    @include margin-right-lg(130px, 65px);
 }

@@ -1,4 +1,3 @@
-// Lägg in fördröjning
 let startItem = 0;
 let endItem = 3;
 const loadMoreBtn = document.querySelector('#loadmore');
@@ -29,7 +28,8 @@ const loopItems = (objs, cont) => {
         setTimeout(() => {
             objs[i].img = cont[objs[i].name]?.img || "/img/coming-soon-1.jpeg";
             objs[i].heading = cont[objs[i].name]?.name || objs[i].name; 
-            console.log(objs[i])
+            objs[i].link = cont[objs[i].name]?.link;
+            console.log(objs.link)
             portCard(objs[i]);
         }, animationSpeed)
         animationSpeed += 200;
@@ -46,6 +46,8 @@ const portCard = (obj) => {
     const info = document.createElement("p");
     const btn = document.createElement("a");
     const btnLink = document.createElement("div");
+    const btnEle = document.createElement("a")
+    const liveBtn = document.createElement("div")
     const heading = document.createElement('div');
     const h2 = document.createElement('h2');
   
@@ -57,16 +59,23 @@ const portCard = (obj) => {
     btnContainer.classList.add("col-3", "btn-container", "mb-s", "mt-s");
     info.classList.add("text-info");
     btn.classList.add("btn");
-    btnLink.classList.add("btn-link")
+    btnLink.classList.add("btn-link");
+    btnEle.classList.add("btn");
+    liveBtn.classList.add("btn-link", "mr-xs");
     heading.classList.add("heading", "mt-s", "mb-s");
   
     img.setAttribute('style',`background-image: url('${obj.img}`);
     info.innerHTML = obj.description;
     btn.setAttribute('href', obj.html_url);
-    btnLink.innerHTML = `Link to github`;
+    btnLink.innerHTML = `Github`;
+    btnEle.setAttribute('href', obj.link);
+    liveBtn.innerHTML = `Live`;
     h2.innerHTML = obj.heading;
 
-    btn.appendChild(btnLink)
+
+    btnEle.appendChild(liveBtn)
+    btnContainer.appendChild(btnEle);
+    btn.appendChild(btnLink);
     btnContainer.appendChild(btn)
     cardMain.appendChild(info);
     cardMain.appendChild(btnContainer);

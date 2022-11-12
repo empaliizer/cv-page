@@ -117,3 +117,11 @@
         margin-right: $mobileValue;
     }
 }
+
+@mixin margin-right-xs($value:15px, $mobileValue: 7px) {
+    margin-right: $value;
+
+    @media screen and (max-width: $mobile-screen){
+        margin-right: $mobileValue;
+    }
+}
